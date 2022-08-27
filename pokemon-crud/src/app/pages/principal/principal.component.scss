@@ -1,0 +1,142 @@
+*{
+    font-family: "Open Sans", "Helvetica", "Arial", "serif" !important;
+    font-size: 12px;
+}
+.main-contenedor{
+    margin-top: 0.5rem;
+}
+.menu {
+    height: 37px;
+    color: #171d49;
+    font-family: "Open Sans", "Helvetica", "Arial", "serif" !important;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 23px;
+}
+.content-menu {
+    padding-left: 0px;
+    &.tar-buttons {
+        margin-bottom: 15px;
+        margin-top: 5px;
+        display: inline-grid;
+    }
+}
+.nav {
+    background-color: rgba(108, 117, 125, 0.06);
+    border-radius: 17.5px;
+    &.tar-buttons {
+        background-color: transparent;
+        text-align: right;
+        display: inline-block;
+        // float: right;
+    }
+}
+.menu-1 a {
+    color: #8b97a3 !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    &.nav-link {
+        &.tar-section {
+            background-color: #3962e6 !important;
+            color: white !important;
+        }
+    }
+}
+.pkmn-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+table{
+    th{
+        font-size: 14px;
+    }
+}
+.border-tl{
+    border-top-left-radius: 3px;
+}
+
+.logo-container{
+
+}
+.table-container{
+    width: 80vw;
+}
+
+.total-pkmns{
+    text-align: right;
+    font-weight: bold;
+}
+.section{
+    width: 80vw;
+    border: 1px solid blue;
+    border-radius: 12px;
+    padding: 2px;
+    min-height: 200px;
+}
+.row-crear{
+    padding-top: 00.5rem;
+    padding-bottom: 0.25rem;
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+
+}
+.botones{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    .button-box{
+        display: flex;
+        justify-content: center;
+        padding-left: 10px;
+    }
+}
+
+.input-field{
+    display: flex;
+    max-width: 200px;
+   
+    .input-block{
+        max-height: 39px;
+        min-height: 37px;
+        align-self: baseline;
+        width: 55px !important;
+        &.slide-p{
+            align-self: end !important;
+            display: flex;
+        }
+
+        
+    }
+    input{
+        max-width: 200px;    
+        min-width: 120px;
+        max-height: 39px;
+        min-height: 37px;
+        height: 37px !important;
+    }
+ 
+    
+}
+.slider{
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        background: red;
+        cursor: pointer;
+      }
+}
+.crear-editar{
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    height: 70px;
+    p{
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
