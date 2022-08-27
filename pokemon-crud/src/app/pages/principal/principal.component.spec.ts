@@ -40,8 +40,8 @@ describe('PrincipalComponent', () => {
     })
 
     it('should return a pokemon list with one element when a idPkmn is sent',()=>{
-      spyOn(component.pkmnService, 'getPokemonById' ).and.returnValue(of({ lsPokemons: []}));
-      component.buscarPokemons();;
+      spyOn(component.pkmnService, 'getPokemonById' ).and.returnValue(of({ pokemon: {}}));
+      component.buscarPokemons();
       expect(component.pokemon).toBeDefined();
       expect(component.error).toBeFalsy;
     })
@@ -80,6 +80,37 @@ describe('PrincipalComponent', () => {
     })
   })
 
+  describe(' Method sendPutPokemon() called ', ()=>{
+    it('should return the edited pokemon ',()=>{
+      spyOn(component.pkmnService, 'updatePokemon' ).and.returnValue(of({ pokemon: {}}));
+      component.sendPutPokemon();
+      expect(component.error).toBeFalsy;
+      
+    })
+    it('should handle error when editing a pokemon',()=>{
+      spyOn(component.pkmnService, 'updatePokemon' ).and.returnValue(throwError(()=> Error('Error in API Call') ) );
+      component.sendPutPokemon();
+      expect(component.error).toBeTruthy;
+    })
+  })
+
+  describe(' Method btn_borrar() called ', ()=>{
+    it('should return a response for deleting a pokemon ',()=>{
+      spyOn(component.pkmnService, 'deletePokemon' ).and.returnValue(of({ response: {}}));
+      const id= '3788';
+      component.btn_borrar(id);
+      expect(component.error).toBeFalsy;
+      expect(component.buscarPokemons).toHaveBeenCalled;
+      
+    })
+    it('should handle error',()=>{
+      spyOn(component.pkmnService, 'deletePokemon' ).and.returnValue(throwError(()=> Error('Error in API Call') ) );
+      const id= '3788';
+      component.btn_borrar(id);
+      expect(component.error).toBeTruthy;
+    })
+  })
+
   describe(' Method btn_editar()) called ', ()=>{
     it('should handle  when an id is sent and response is ok',()=>{
       const id='3788';
@@ -104,6 +135,8 @@ describe('PrincipalComponent', () => {
       spyOn(component, 'validaEnter' ).and.callThrough();
       component.validaEnter(event);
       expect(component.validaEnter).toBeTruthy;
+      expect(component.buscarPokemons).toHaveBeenCalled;
+
     })
 
     it('should handle when charCode not equals 13',()=>{

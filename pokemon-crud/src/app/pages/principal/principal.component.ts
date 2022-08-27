@@ -193,7 +193,7 @@ validaDigito(event: any) {
 
   var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
   if(!this.regex.test(key)) {
-    event.preventDefault();
+    //event.preventDefault();
     return false;
   }
   return true;

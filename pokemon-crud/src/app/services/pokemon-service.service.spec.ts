@@ -104,20 +104,15 @@ describe('PokemonServiceService', () => {
   })
 
   it('should delete a pokemon by its id ', ()=>{
-    httpClientSpy= jasmine.createSpyObj('HttpClient', ['get'])
+    httpClientSpy= jasmine.createSpyObj('HttpClient', ['delete'])
     const id='3799'
     const result={
-      id: 3791,
-      name: "zapdos",
-      image: "",
-      attack: 50,
-      defense: 50,
-      hp:101,
-      type:"Electric",
-      idAuthor:1
+      "success": true,
+      "type": "pokemon_removed",
+      "data": []
     }
-    httpClientSpy.get.and.returnValue(of(result));
-    service.getPokemonById(id).subscribe( res=>{
+    httpClientSpy.delete.and.returnValue(of(result));
+    service.deletePokemon(id).subscribe( res=>{
       expect(res).toEqual(result);
     })
   })

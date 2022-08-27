@@ -38,7 +38,7 @@ export class CrearPokemonComponent implements OnInit {
         next: (res: any) => {
           console.log('resp created', res);
           this.error = false;
-          this.pokemonForm.reset();
+          this.reset();
         },
         error: (error) => {
           console.log("Error ", error);
