@@ -1,1 +1,101 @@
-<p>crear-pokemon works!</p>
+<div class="main-contenedor">
+    <div class="row justify-center ">
+        <form [formGroup]="pokemonForm" (ngSubmit)="sendPostPokemon()">
+            <div class="section">
+                <div class="crear-editar justify-center">
+                    <p *ngIf="!isEditing"> Nuevo Pokemon </p>
+                    <p *ngIf="isEditing"> Editar Pokemon </p>
+                </div>
+                <div class="row-crear">
+                    <div class="input-field">
+                        <div class="input-block">
+                            <label>Nombre:</label>
+                        </div>
+                        <div class="input-block pl">
+                            <input type="text" formControlName="name">
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <div class="input-block slide-p">
+                            <label>Ataque:</label>
+                            <p>{{atk}}</p>
+                        </div>
+                        <div class="input-block pl">
+                            <input #attack id="attack" formControlName="attack"
+                                [(ngModel)]="atk"
+                                (input)="atk.value"
+                                class="slider" type="range" min="1" max="100" value="0">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row-crear">
+                    <div class="input-field">
+                        <div class="input-block">
+                            <label>Imagen: </label>
+                        </div>
+                        <div class="input-block pl">
+                            <input #image id="image" type="text" formControlName="image">
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <div class="input-block slide-p">
+                            <label>Defensa: </label>
+                            <p> {{def}}</p>
+                            <!-- <p> {{ defense }}</p> -->
+                        </div>
+                        <div class="input-block pl">
+                            <input #defense id="defense" formControlName="defense" 
+                                (input)="def.value" [(ngModel)]="def"
+                                class="slider" type="range" min="1" max="100" value="1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-crear">
+                    <div class="input-field">
+                        <div class="input-block">
+                            <label>Tipo: </label>
+                        </div>
+                        <div class="input-block pl">
+                            <input #typeP id="type" type="text" formControlName="type">
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <div class="input-block slide-p">
+                            <label> Hp: </label>
+                            <p> {{lifePoints}}</p>
+                            <!-- <p> {{ defense }}</p> -->
+                        </div>
+                        <div class="input-block pl">
+                            <input #lifePoint id="lifePoints" formControlName="hp" 
+                                (input)="lifePoints.value" [(ngModel)]="lifePoints"
+                                class="slider" type="range" min="1" max="300" value="1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="botones w-100">
+                    <div class="button-box">
+                        <button [disabled]="pokemonForm.invalid" class="btn success-button">
+                            <span>
+                                <img src="/assets/save.png" height="11px" width="11px" alt="">
+                            </span>
+                            Guardar
+                        </button>
+                    </div>
+                    <div class="button-box">
+                        <button class="btn success-button" (click)="reset()">
+                            <span>
+                                <img src="/assets/close.png" height="11px" width="11px" alt="">
+                            </span>
+                            Cancelar
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

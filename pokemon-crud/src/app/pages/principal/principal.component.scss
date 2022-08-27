@@ -6,13 +6,8 @@
     margin-top: 0.5rem;
 }
 .menu {
-    height: 37px;
-    color: #171d49;
+    padding-left: 40px;
     font-family: "Open Sans", "Helvetica", "Arial", "serif" !important;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 23px;
 }
 .content-menu {
     padding-left: 0px;
@@ -67,10 +62,12 @@ table{
 .total-pkmns{
     text-align: right;
     font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .section{
     width: 80vw;
-    border: 1px solid blue;
+    border: 1px solid #d8dde1;
     border-radius: 12px;
     padding: 2px;
     min-height: 200px;
@@ -139,4 +136,11 @@ table{
         font-size: 15px;
         font-weight: bold;
     }
+}
+table,th, td{
+    border: 1px solid #d8dde1;
+
+}
+td{
+    max-height: 60px
 }

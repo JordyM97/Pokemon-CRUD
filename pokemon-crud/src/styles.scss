@@ -3,7 +3,7 @@ button {
     &.btn {
         &.success-button {
             font-size: 15px;
-            background-color: #3962e6;
+            background-color: #5922df;
             border-radius: 5px;
             color: white;
             height: 40px;
@@ -52,15 +52,15 @@ button {
     &.btn-clear {
         height: 38px;
         width: 45px !important;
-        border: 1px solid #3962e6;
+        border: 1px solid #5922df;
         background-color: white;
         position: relative;
         border-radius: 5px !important;
     }
     &.outline-button {
-        border: 1px solid #3962e6;
+        border: 1px solid #5922df;
         background-color: white;
-        color: #3962e6 !important;
+        color: #5922df !important;
         //font-size: 12px;
     }
 }
@@ -114,4 +114,27 @@ input {
 }
 .pl{
     padding-left:1rem;
+}
+
+    
+input[type='range']::-webkit-slider-thumb {
+    background: #434343;
+}
+/** FF*/
+// input[type="range"]::-moz-range-progress {
+//   background-color: #5922df; 
+// }
+// input[type="range"]::-moz-range-track {  
+//   background-color: #5922df;
+// }
+// /* IE*/
+// input[type="range"]::-ms-fill-lower {
+//   background-color: #5922df; 
+// }
+// input[type="range"]::-ms-fill-upper {  
+//   background-color: #5922df;
+// }
+.align-items-end{
+    display:flex;
+    align-items: end;
 }

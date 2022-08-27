@@ -1,0 +1,83 @@
+.section {
+    width: 80vw;
+    border: 1px solid #d8dde1;;
+    border-radius: 12px;
+    padding: 2px;
+    min-height: 200px;
+}
+
+.row-crear {
+    padding-top: 00.5rem;
+    padding-bottom: 0.25rem;
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+    .button-box {
+        display: flex;
+        justify-content: center;
+        padding-left: 10px;
+    }
+}
+
+.input-field {
+    display: flex;
+    max-width: 200px;
+
+    .input-block {
+        max-height: 39px;
+        min-height: 37px;
+        align-self: baseline;
+        width: 55px !important;
+
+        &.slide-p {
+            align-self: end !important;
+            display: flex;
+            font-size: 12px;
+            font-weight: bold;
+
+        }
+
+
+    }
+
+    input {
+        max-width: 200px;
+        min-width: 120px;
+        max-height: 39px;
+        min-height: 37px;
+        height: 37px !important;
+    }
+
+
+}
+
+.slider {
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        background: red;
+        cursor: pointer;
+    }
+}
+
+.crear-editar {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    height: 70px;
+
+    p {
+        font-size: 15px;
+        font-weight: bold;
+    }
+}

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
 import { CrearPokemonComponent } from './components/crear-pokemon/crear-pokemon.component';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -20,7 +20,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     CommonModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
